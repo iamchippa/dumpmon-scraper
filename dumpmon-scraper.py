@@ -55,7 +55,8 @@ def remove_old_dump_and_alert_txts():
 def scrape_info_from_links():
     f = open(dump_txt_file, 'w+')
     for link in tweets.links:
-        f.write(get_link_output(link).encode('utf-8'))
+        if link.startswith('http'):
+            f.write(get_link_output(link).encode('utf-8'))
     f.close()
 
 
