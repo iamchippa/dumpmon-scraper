@@ -1,9 +1,11 @@
+------------------
 dumpmon-scraper.py
 ------------------
 
 This is a simple script that will open the last 20 links from the @Dumpmon
 (https://twitter.com/dumpmon) twitter account, dig through the info, and send an
 email alert to you based on a keyword you define. 
+
 
 ------------------
 Prerequisites
@@ -15,6 +17,7 @@ get the keys and tokens necessary to scrape the info.
     2. After the app is created, look at the "Keys and Access Tokens" tab to
        find the info necessary to run this script
     3. Update the variables in the script to your own
+
 
 ------------------
 Running
