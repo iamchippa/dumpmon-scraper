@@ -45,7 +45,7 @@ def get_link_output(link):
     return r.text
 
 
-def remove_dump_and_alert_txts():
+def remove_old_dump_and_alert_txts():
     if os.path.isfile(dump_txt_file):
         os.remove(dump_txt_file)
     if os.path.isfile(alert_txt_file):
@@ -84,7 +84,7 @@ if __name__ == '__main__':
     try:
         tweets = Dumpmon()
         tweets.get_links()
-        remove_dump_and_alert_txts()
+        remove_old_dump_and_alert_txts()
         scrape_info_from_links()
         search_for_text()
         if os.stat(alert_txt_file).st_size > 0:
