@@ -18,6 +18,8 @@ get the keys and tokens necessary to scrape the info.
        find the info necessary to run this script
     3. Update the variables in the script to your own
 
+Also check that you have the prerequisites by running 'check-prereq.py'
+
 
 ------------------
 Running
