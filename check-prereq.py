@@ -4,7 +4,7 @@
 try:
     import os.path
 except:
-    print("ERROR: Module re not available. Cannot check prerequsites.")
+    print("ERROR: Module os not available. Cannot check prerequsites.")
     print("Please consider installing 'os.path' using pip")
     quit
 try:
@@ -30,7 +30,7 @@ base_dir = os.path.abspath(os.path.dirname(__file__))
 MIN_MINOR_VER = 6
 DESIRED_PYTHON_MAJOR_VER = 2
 PROGRAM_FILE = os.path.join(base_dir, 'dumpmon-scraper.py')
-TWITTER_APP_CREDS_FILE = os.path.join(base_dir, '.twitter-app.cfg')
+TWITTER_APP_CREDS_FILE = os.path.join(base_dir, '.config.cfg')
 
 
 # We support only specific python versions

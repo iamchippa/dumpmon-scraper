@@ -6,20 +6,24 @@ import requests
 import smtplib
 from email.mime.text import MIMEText
 import os
+import ConfigParser
 
-alert_txt_file = '/tmp/alert.txt'
-dump_txt_file = '/tmp/dump.txt'
-email_to = ''
-email_from = ''
-email_subject = ''
-smtp_server = ''
-search_string = ''
-consumer_key = ''
-consumer_secret = ''
-access_token_key = ''
-access_token_secret = ''
-twitter_user = 'dumpmon'
 
+config = ConfigParser.ConfigParser()
+config.read('.config.cfg')
+
+alert_txt_file = config.get('config', 'alert_txt_file')
+dump_txt_file = config.get('config', 'dump_txt_file')
+email_to = config.get('config', 'email_to')
+email_from = config.get('config', 'email_from')
+email_subject = config.get('config', 'email_subject')
+smtp_server = config.get('config', 'smtp_server')
+search_string = config.get('config', 'search_string')
+twitter_user = config.get('config', 'twitter_user')
+consumer_key = config.get('config', 'consumer_key')
+consumer_secret = config.get('config', 'consumer_secret')
+access_token_key = config.get('config', 'access_token_key')
+access_token_secret = config.get('config', 'access_token_secret')
 
 class Dumpmon(object):
 

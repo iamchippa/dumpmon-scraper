@@ -16,7 +16,11 @@ get the keys and tokens necessary to scrape the info.
     1. Click "Create New App" and fill out the info
     2. After the app is created, look at the "Keys and Access Tokens" tab to
        find the info necessary to run this script
-    3. Update the variables in the script to your own
+    3. Update the variables in the config.cfg file with the tokens for twitter
+       and your search details
+
+    NOTE: There is an ".example_config.cfg" file for you - remove the "example_"
+          from the filename before executing (but leave the '.')
 
 Also check that you have the prerequisites by running 'check-prereq.py'
 
