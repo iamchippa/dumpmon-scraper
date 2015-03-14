@@ -1,12 +1,25 @@
 #!/usr/bin/env python
+"""
+Usage:
+    ./dumpmon-scraper.py
+    ./dumpmon-scraper.py check
+    ./dumpmon-scraper.py [-h | --help]
 
+Options:
+    -h --help   Show this screen
+Commands:
+    check     Check that all dependencies are installed
 
+"""
+
+from docopt import docopt
 import twitter
 import requests
 import smtplib
 from email.mime.text import MIMEText
 import os
 import ConfigParser
+import checkPrereq
 
 
 config = ConfigParser.ConfigParser()
@@ -24,6 +37,7 @@ consumer_key = config.get('config', 'consumer_key')
 consumer_secret = config.get('config', 'consumer_secret')
 access_token_key = config.get('config', 'access_token_key')
 access_token_secret = config.get('config', 'access_token_secret')
+
 
 class Dumpmon(object):
 
@@ -86,6 +100,10 @@ def send_alert_email():
 
 
 if __name__ == '__main__':
+    arguments = docopt(__doc__)
+    if arguments['check']:
+        checkPrereq.check_prequisites()
+        exit(0)
     try:
         tweets = Dumpmon()
         tweets.get_links()

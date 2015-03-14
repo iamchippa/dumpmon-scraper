@@ -29,6 +29,8 @@ Also check that you have the prerequisites by running 'check-prereq.py'
 Running
 ------------------
 
+./dumpmon-scraper.py check      This will check that you have the correct
+                                dependencies installed
 ./dumpmon-scraper.py
 
 Simple enough :) I have it cron'd, but it can be run adhoc as well
