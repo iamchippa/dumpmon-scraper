@@ -22,8 +22,6 @@ get the keys and tokens necessary to scrape the info.
     NOTE: There is an ".example_config.cfg" file for you - remove the "example_"
           from the filename before executing (but leave the '.')
 
-Also check that you have the prerequisites by running 'check-prereq.py'
-
 
 ------------------
 Running
