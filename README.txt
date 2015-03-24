@@ -3,8 +3,8 @@ dumpmon-scraper.py
 ------------------
 
 This is a simple script that will open the last 20 links from the @Dumpmon
-(https://twitter.com/dumpmon) twitter account, dig through the info, and send an
-email alert to you based on a keyword you define. 
+(https://twitter.com/dumpmon - shoutout to @jw_sec for creating this bot!) twitter 
+account, dig through the info, and send an email alert to you based on a keyword you define. 
 
 
 ------------------
