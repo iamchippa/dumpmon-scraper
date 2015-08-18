@@ -17,7 +17,9 @@ get the keys and tokens necessary to scrape the info.
     2. After the app is created, look at the "Keys and Access Tokens" tab to
        find the info necessary to run this script
     3. Update the variables in the config.cfg file with the tokens for twitter
-       and your search details
+       and your search details. Multiple searches can be defined in the search_string
+       parameter by delimiting with a comma (,) e.g. 'cat,dog,test,bob'. This delimiter
+       can also be changed within the config file
 
     NOTE: There is an ".example_config.cfg" file for you - remove the "example_"
           from the filename before executing (but leave the '.')

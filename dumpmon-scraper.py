@@ -37,7 +37,7 @@ consumer_key = config.get('config', 'consumer_key')
 consumer_secret = config.get('config', 'consumer_secret')
 access_token_key = config.get('config', 'access_token_key')
 access_token_secret = config.get('config', 'access_token_secret')
-
+delimiter = config.get('config', 'delimiter')
 
 class Dumpmon(object):
 
@@ -82,7 +82,8 @@ def search_for_text():
     alert = open(alert_txt_file, 'w+')
     with open(dump_txt_file) as final:
         for line in final:
-            if search_string in line:
+            searches = search_string.split(delimiter)
+            if any(s in line for s in searches):
                 alert.write(line.strip())
     alert.close()
 
